@@ -1,0 +1,173 @@
+{
+  "projectType": "api-service",
+  "projectName": "WuzAPI",
+  "projectDescription": "Simple RESTful API for WhatsApp in Golang using the Whatsmeow multi-device library",
+  "theme": "sequoia",
+  "primaryColor": "#dcbc88",
+  "lightColor": "#735325",
+  "darkColor": "#393838",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "installation"
+            ]
+          },
+          {
+            "group": "Configuration",
+            "pages": [
+              "configuration/environment-variables",
+              "configuration/database",
+              "configuration/webhooks",
+              "configuration/hmac-security"
+            ]
+          },
+          {
+            "group": "Features",
+            "pages": [
+              "features/s3-storage",
+              "features/rabbitmq",
+              "features/proxy",
+              "features/multiple-instances"
+            ]
+          },
+          {
+            "group": "Deployment",
+            "pages": [
+              "deployment/docker",
+              "deployment/homebrew",
+              "deployment/manual"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Admin",
+            "pages": [
+              "api/admin/list-users",
+              "api/admin/create-user",
+              "api/admin/delete-user"
+            ]
+          },
+          {
+            "group": "Session",
+            "pages": [
+              "api/session/connect",
+              "api/session/disconnect",
+              "api/session/logout",
+              "api/session/status",
+              "api/session/qr"
+            ]
+          },
+          {
+            "group": "Messages",
+            "pages": [
+              "api/messages/send-text",
+              "api/messages/send-image",
+              "api/messages/send-audio",
+              "api/messages/send-video",
+              "api/messages/send-document",
+              "api/messages/send-sticker",
+              "api/messages/send-location",
+              "api/messages/send-contact",
+              "api/messages/send-poll"
+            ]
+          },
+          {
+            "group": "Chat",
+            "pages": [
+              "api/chat/presence",
+              "api/chat/mark-read",
+              "api/chat/react",
+              "api/chat/download-media"
+            ]
+          },
+          {
+            "group": "Users",
+            "pages": [
+              "api/users/info",
+              "api/users/check",
+              "api/users/avatar",
+              "api/users/contacts"
+            ]
+          },
+          {
+            "group": "Groups",
+            "pages": [
+              "api/groups/create",
+              "api/groups/list",
+              "api/groups/info",
+              "api/groups/invite-link",
+              "api/groups/photo",
+              "api/groups/participants"
+            ]
+          },
+          {
+            "group": "Webhooks",
+            "pages": [
+              "api/webhooks/configure",
+              "api/webhooks/get",
+              "api/webhooks/delete"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "RESTful WhatsApp API with multi-device support",
+    "Multiple concurrent sessions and users",
+    "Webhook notifications with HMAC security",
+    "S3-compatible storage for media files",
+    "Send text, image, audio, video, document, sticker, location, contact, and poll messages",
+    "Group management (create, delete, list, update)",
+    "User management with admin endpoints",
+    "RabbitMQ integration for event distribution",
+    "Docker and Docker Compose support",
+    "PostgreSQL and SQLite database support"
+  ],
+  "publicApiSurface": [
+    "POST /session/connect - Connect to WhatsApp",
+    "POST /session/disconnect - Disconnect from WhatsApp",
+    "POST /session/logout - Logout from WhatsApp",
+    "GET /session/status - Get connection status",
+    "GET /session/qr - Get QR code for scanning",
+    "POST /chat/send/text - Send text message",
+    "POST /chat/send/image - Send image message",
+    "POST /chat/send/audio - Send audio message",
+    "POST /chat/send/video - Send video message",
+    "POST /chat/send/document - Send document",
+    "POST /chat/send/sticker - Send sticker",
+    "POST /chat/send/location - Send location",
+    "POST /chat/send/contact - Send contact",
+    "POST /chat/send/poll - Send poll",
+    "POST /chat/presence - Set chat presence",
+    "POST /chat/markread - Mark messages as read",
+    "POST /chat/react - React to message",
+    "POST /user/info - Get user information",
+    "POST /user/check - Check if users are on WhatsApp",
+    "POST /user/avatar - Get user avatar",
+    "GET /user/contacts - Get all contacts",
+    "POST /group/create - Create group",
+    "GET /group/list - List groups",
+    "GET /group/info - Get group information",
+    "GET /group/invitelink - Get group invite link",
+    "POST /group/photo - Set group photo",
+    "POST /group/name - Set group name",
+    "POST /webhook - Configure webhook",
+    "GET /webhook - Get webhook configuration",
+    "DELETE /webhook - Delete webhook",
+    "GET /admin/users - List all users",
+    "POST /admin/users - Create user",
+    "DELETE /admin/users/{id} - Delete user"
+  ]
+}
